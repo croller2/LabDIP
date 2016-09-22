@@ -10,9 +10,21 @@ package dip.lab2.student.solution1;
  * @author chris
  */
 public class TipCalculatorManager {
+    private TipCalculator tipCal;
+
+    public TipCalculatorManager(TipCalculator tipCal) {
+        this.tipCal = tipCal;
+    }
+
+    public TipCalculator getTipCal() {
+        return tipCal;
+    }
+
+    public void setTipCal(TipCalculator tipCal) {
+        this.tipCal = tipCal;
+    }
     
-    
-    public final double calculateTip(TipCalculator tipCalc){
+    public final double getTip(){
         return tipCalc.getTip();
     }
 }
