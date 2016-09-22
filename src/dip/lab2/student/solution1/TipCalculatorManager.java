@@ -9,7 +9,7 @@ package dip.lab2.student.solution1;
  *
  * @author chris
  */
-public class CalculatorManager {
+public class TipCalculatorManager {
     
     
     public final double calculateTip(TipCalculator tipCalc){

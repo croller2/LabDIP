@@ -16,6 +16,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
 
     private ServiceQuality serviceQuality;
     
+    @Override
     public final ServiceQuality getServiceQuality() {
         return serviceQuality;
     }  
@@ -43,6 +44,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
         this.maxBill = maxBill;
     }
 
+    @Override
     public final void setServiceQuality(ServiceQuality q) {
         this.serviceQuality = q;
     }

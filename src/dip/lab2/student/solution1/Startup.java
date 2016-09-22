@@ -26,7 +26,7 @@ public class Startup {
         TipCalculator tipCalcOne = new BaggageServiceTipCalculator(ServiceQuality.FAIR, 3); 
         TipCalculator tipCalcTwo = new FoodServiceTipCalculator(ServiceQuality.GOOD, 87.98);
         
-        CalculatorManager tipMgr = new CalculatorManager();
+        TipCalculatorManager tipMgr = new TipCalculatorManager();
         double tipOne = tipMgr.calculateTip(tipCalcOne);
         double tipTwo = tipMgr.calculateTip(tipCalcTwo);
         System.out.println("Tip is: " + tipOne );

@@ -27,10 +27,12 @@ public class FoodServiceTipCalculator implements TipCalculator {
         this.minBill = minBill;
     }
     
+    @Override
     public final ServiceQuality getServiceQuality() {
         return serviceQuality;
     }
 
+    @Override
     public final void setServiceQuality(ServiceQuality q) {
         this.serviceQuality = q;
     }
