@@ -17,7 +17,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
 
     private ServiceQuality serviceQuality;
     
-    public ServiceQuality getServiceQuality() {
+    public final ServiceQuality getServiceQuality() {
         return serviceQuality;
     }  
     
@@ -28,38 +28,38 @@ public class BaggageServiceTipCalculator implements TipCalculator {
         baseTipPerBag = 1.00; // set default value
     }
     
-    public void setServiceQuality(ServiceQuality q) {
+    public final void setServiceQuality(ServiceQuality q) {
         this.serviceQuality = q;
     }
     
 
     @Override
-    public void setGoodRate(double goodRate) {
+    public final void setGoodRate(double goodRate) {
         this.goodRate = goodRate;
     }
 
     @Override
-    public double getGoodRate() {
+    public final double getGoodRate() {
         return goodRate;
     }
 
     @Override
-    public void setFairRate(double fairRate) {
+    public final void setFairRate(double fairRate) {
         this.fairRate = fairRate;
     }
 
     @Override
-    public double getFairRate() {
+    public final double getFairRate() {
         return fairRate;
     }
 
     @Override
-    public void setPoorRate(double poorRate) {
+    public final void setPoorRate(double poorRate) {
         this.poorRate = poorRate;
     }
 
     @Override
-    public double getPoorRate() {
+    public final double getPoorRate() {
         return poorRate;
     }
 
@@ -67,7 +67,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
 
 
     @Override
-    public double getTip() {
+    public final double getTip() {
         double tip = 0.00; // always initialize local variables
 
         switch(serviceQuality) {
@@ -85,7 +85,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
         return tip;
     }
     
-    public int getBagCount() {
+    public final int getBagCount() {
         return bagCount;
     }
 
@@ -97,11 +97,11 @@ public class BaggageServiceTipCalculator implements TipCalculator {
         this.bagCount = bagCount;
     }
 
-    public double getBaseTipPerBag() {
+    public final double getBaseTipPerBag() {
         return baseTipPerBag;
     }
 
-    public void setBaseTipPerBag(double baseTipPerBag) {
+    public final void setBaseTipPerBag(double baseTipPerBag) {
         if(baseTipPerBag < 0) {
             throw new IllegalArgumentException(
                     "error: base tip must be greater than or equal to zero");
