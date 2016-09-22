@@ -12,7 +12,7 @@ package dip.lab2.student.solution1;
 public class CalculatorManager {
     
     
-    public double calculateTip(TipCalculator tipCalc){
+    public final double calculateTip(TipCalculator tipCalc){
         return tipCalc.getTip();
     }
 }
