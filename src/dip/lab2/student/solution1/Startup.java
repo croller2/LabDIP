@@ -23,10 +23,12 @@ public class Startup {
 
     public static void main(String[] args) {
         
-        TipCalculator tipCalcOne = new BaggageServiceTipCalculator(ServiceQuality.FAIR, 3); 
-        TipCalculator tipCalcTwo = new FoodServiceTipCalculator(ServiceQuality.GOOD, 87.98);
         
-        TipCalculatorManager tipMgr = new TipCalculatorManager(tipCalcOne);
+        //The constructors for these two different types of calculators are not polymporhic...which is fine because you're using low level concrete classes
+        TipCalculator tipCalcOne = new BaggageServiceTipCalculator(ServiceQuality.FAIR, 3); 
+        TipCalculator tipCalcTwo = new FoodServiceTipCalculator(ServiceQuality.GOOD, 100.00);
+        
+        TipCalculatorManager tipMgr = new TipCalculatorManager(tipCalcTwo);
         
         double tipOne = tipMgr.getTip();
 

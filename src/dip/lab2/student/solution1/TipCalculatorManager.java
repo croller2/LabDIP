@@ -16,15 +16,15 @@ public class TipCalculatorManager {
         this.tipCal = tipCal;
     }
 
-    public TipCalculator getTipCal() {
+    public final TipCalculator getTipCal() {
         return tipCal;
     }
 
-    public void setTipCal(TipCalculator tipCal) {
+    public final void setTipCal(TipCalculator tipCal) {
         this.tipCal = tipCal;
     }
     
     public final double getTip(){
-        return tipCalc.getTip();
+        return tipCal.getTip();
     }
 }
