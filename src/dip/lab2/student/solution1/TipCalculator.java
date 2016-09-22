@@ -14,16 +14,4 @@ public interface TipCalculator {
     
     public abstract double getTip();
     
-    public abstract void setGoodRate(double goodRate);
-    
-    public abstract double getGoodRate();
-    
-    public abstract void setFairRate(double fairRate);
-    
-    public abstract double getFairRate();
-    
-    public abstract void setPoorRate(double poorRate);
-    
-    public abstract double getPoorRate();
-    
 }

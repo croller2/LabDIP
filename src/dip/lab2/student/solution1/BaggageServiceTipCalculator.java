@@ -3,11 +3,10 @@ package dip.lab2.student.solution1;
 public class BaggageServiceTipCalculator implements TipCalculator {
    
     
-    private static final double MIN_BILL = 0.00;
-    private static final double  MAX_BILL = 100.00;
+    private double minBill = 0.00;
+    private double  maxBill = 100.00;
     private static final String BILL_ENTRY_ERR =
-            "Error: bill must be between " + MIN_BILL + " and "
-            + MAX_BILL;
+            "Error: bill must be between";
     private double goodRate = 0.20;
     private double fairRate = 0.15;
     private double poorRate = 0.10;
@@ -27,38 +26,50 @@ public class BaggageServiceTipCalculator implements TipCalculator {
 
         baseTipPerBag = 1.00; // set default value
     }
-    
+
+    public double getMinBill() {
+        return minBill;
+    }
+
+    public void setMinBill(double minBill) {
+        this.minBill = minBill;
+    }
+
+    public double getMaxBill() {
+        return maxBill;
+    }
+
+    public void setMaxBill(double maxBill) {
+        this.maxBill = maxBill;
+    }
+
     public final void setServiceQuality(ServiceQuality q) {
         this.serviceQuality = q;
     }
     
-
-    @Override
     public final void setGoodRate(double goodRate) {
         this.goodRate = goodRate;
     }
 
-    @Override
     public final double getGoodRate() {
         return goodRate;
     }
 
-    @Override
+
     public final void setFairRate(double fairRate) {
         this.fairRate = fairRate;
     }
 
-    @Override
     public final double getFairRate() {
         return fairRate;
     }
 
-    @Override
+
     public final void setPoorRate(double poorRate) {
         this.poorRate = poorRate;
     }
 
-    @Override
+
     public final double getPoorRate() {
         return poorRate;
     }
